@@ -21,8 +21,8 @@ TagManager:
   - Pickup
   - DeathZone
   - Decorations
-  - 
-  - 
+  - Background
+  - Light
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: On screen effects
     uniqueID: 3998438541
+    locked: 0
+  - name: Light
+    uniqueID: 474797865
     locked: 0

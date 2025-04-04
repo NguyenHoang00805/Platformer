@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
+    DamageFlash DamageFlash;
     Animator animator;
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent<int, Vector2> damageableDeath;
@@ -87,6 +88,7 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        DamageFlash = GetComponent<DamageFlash>();
     }
 
     private void Start()
@@ -119,7 +121,7 @@ public class Damageable : MonoBehaviour
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
-
+            //DamageFlash.CallDamageFlash();
             return true;
         }
         return false;

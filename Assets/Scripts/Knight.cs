@@ -10,6 +10,7 @@ public class Knight : MonoBehaviour
     Rigidbody2D rb;
     TouchingDirections touchingDirections;
     Animator animator;
+    DamageFlash damageFlash;
 
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -87,6 +88,7 @@ public class Knight : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
+        damageFlash = GetComponent<DamageFlash>();
     }
 
     // Update is called once per frame
@@ -147,6 +149,7 @@ public class Knight : MonoBehaviour
     public void onHit(int damage, Vector2 knockback)
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        damageFlash.CallDamageFlash();
     }
 
     public void onCliffDetected()

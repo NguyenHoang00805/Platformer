@@ -11,9 +11,9 @@ public class GameOverScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
     
-    public void RestartButton()
+    public void RestartButton(int sceneIndex)
     {
-        SceneManager.LoadScene("GameplayScene");
+        SceneManager.LoadScene(sceneIndex);
         Time.timeScale = 1;
     }
 }

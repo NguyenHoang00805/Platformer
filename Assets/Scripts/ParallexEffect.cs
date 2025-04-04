@@ -13,7 +13,8 @@ public class ParallexEffect : MonoBehaviour
     float zDistanceFromTarget => transform.position.z - followTarget.transform.position.z;
 
     float clippingPlane => (cam.transform.position.z - (zDistanceFromTarget > 0 ? cam.nearClipPlane: cam.farClipPlane));
-    float parallexFactor => Mathf.Abs(zDistanceFromTarget) / clippingPlane; 
+    float parallexFactor => Mathf.Abs(zDistanceFromTarget) / clippingPlane;
+    
     // Start is called before the first frame update
     void Start()
     {

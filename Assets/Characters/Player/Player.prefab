@@ -401,7 +401,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -485,6 +485,7 @@ MonoBehaviour:
   dashingPower: 15
   dashingTime: 0.2
   _isFacingRight: 1
+  UIManager: {fileID: 0}
   gameOverScreen: {fileID: 0}
 --- !u!114 &5471678371553962094
 MonoBehaviour:
@@ -667,6 +668,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cd4d4dbe-a843-4137-833e-9e51d0ffe999
     m_ActionName: Player/Dash[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0df7afef-5f17-4cdc-a0f2-8de08cafb44e
+    m_ActionName: UI/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

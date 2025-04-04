@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public GameOverScreen gameOverScreen;
     TouchingDirections touchingDirections;
     Damageable damageable;
-    public PlayerInput playerInput;
+    private PlayerInput playerInput;
     public float currentMoveSpeed
     {
         get
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    //Check if player can use coyote jump
     private bool CanCoyoteJump()
     {
         return _coyoteUsable && !touchingDirections.IsGrounded && Time.time <  _timeSinceGrounded + coyoteTimer;

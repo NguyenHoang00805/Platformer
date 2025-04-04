@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5092539188072369996}
   - component: {fileID: 4994450328028860462}
   - component: {fileID: 1532852455977462061}
+  - component: {fileID: 5067236607207414890}
   m_Layer: 8
   m_Name: KnightEnemy
   m_TagString: Untagged
@@ -61,7 +62,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 889c6999edf2b8c4ab9752bf3edbbe17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
@@ -258,10 +259,31 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _maxHealth: 100
+  startPos: {x: 0, y: 0}
   _health: 100
   _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0
+--- !u!114 &5067236607207414890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205905464324338929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba8a2049875fa142ac3d6f8ec3a086c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 4, g: 4, b: 4, a: 1}
+  flashTime: 0.25
+  _flashCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1140629239442406183
 GameObject:
   m_ObjectHideFlags: 0

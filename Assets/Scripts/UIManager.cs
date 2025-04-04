@@ -126,9 +126,9 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void RestartGame()
+    public void RestartGame(int sceneIndex)
     {
-        gameOverScreen.RestartButton();
+        gameOverScreen.RestartButton(sceneIndex);
         PauseGame(false);
     }
 
